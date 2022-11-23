@@ -41,7 +41,7 @@
 
 #### 도서 대여 & 반납
 
-![borrowReturnGif](C:\Users\ssafy\Project\BookKioskProject\assets\borrowReturnGif.gif)
+![borrowReturnGif](./assets/borrowReturnGif.gif)
 
 - NFC 태그를 이용해 대여될 책 & 회원정보 인식
 - 읽어들인 정보를 socket.io 통신을 이용해 서버로 전송
@@ -66,7 +66,7 @@
 
 #### 도서 추천
 
-<img src="C:\Users\ssafy\Project\BookKioskProject\assets\recommendGif.gif" alt="recommendGif" style="zoom: 150%;" />
+<img src="./assets/recommendGif.gif" alt="recommendGif" style="zoom: 150%;" />
 
 
 
