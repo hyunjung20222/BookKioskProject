@@ -1,0 +1,65 @@
+@keyframes smoothAppear {
+  from {
+    opacity: 0;
+    transform: translateY(-5%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu{
+  display: flex;
+  flex-wrap: wrap;
+  a {
+    font-size: 2rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    flex-shrink: 0;
+    margin: 0 1rem;
+  }
+}
+
+.addBoard-wrapper {
+  opacity: 0;
+  animation: smoothAppear 1s forwards;
+  animation-delay: 0.5s;
+  font-family: 'Noto Sans KR', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .addBoard-header{
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 20px 0;
+  }
+
+  .submitButton{
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .disable-button{
+      background-color: snow;
+      font-size: 2rem;
+      color: black;
+      cursor: not-allowed;
+    }
+
+    .success-button{
+      background-color: snow;
+      color: black;
+      font-size: 2rem;
+    }
+  }
+  
+  .addBoard-body {
+    display: flex;
+    margin: 20px 0;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.TestMapper">
+
+    <select id="getUserList" resultType="com.example.demo.dto.TestDto">
+        SELECT * FROM data.test
+    </select>
+    <insert id="insertBookApiData" parameterType="com.example.demo.dto.BookDto" >
+        INSERT INTO book(ISBN,title,author,book_index,cover,story,publish_date,genre,type,position,number_of_reviews,number_of_rental,content)
+        values (#{ISBN},#{title},#{author},#{index},#{cover},#{story},#{publish_date},#{genre},#{type},#{position},#{number_of_reviews},#{number_of_rental},#{content});
+    </insert>
+
+
+
+</mapper>

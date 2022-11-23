@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="S07P12D211">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/group-button-with-svg-icons.zip!/" />
+      <root url="jar://$PROJECT_DIR$/book_kiosk.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.UserMapper">
+
+
+    <select id="searchByEmail" parameterType="String" resultType="com.example.demo.security.UserDto">
+        SELECT * FROM data.users WHERE email=#{email};
+    </select>
+
+    <insert id="registUser" parameterType="com.example.demo.security.UserDto" >
+        INSERT INTO data.users(email,password,phonenumber,address,manager_bool,name,gender,birthday)
+        values (#{email},#{password},#{phonenumber},#{address},0,#{name},#{gender},#{birthday});
+    </insert>
+
+</mapper>

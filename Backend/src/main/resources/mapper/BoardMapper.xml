@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.BoardMapper">
+
+
+    <select id="noticeAll" resultType="com.example.demo.dto.BoardDto"  >
+        SELECT * FROM data.board WHERE type='notice' ;
+    </select>
+    <select id="searchIdfromBoardId" parameterType="int" resultType="String">
+        SELECT id FROM data.board WHERE board_id = #{boardId};
+    </select>
+    <select id="noticeDetail" parameterType="int" resultType="com.example.demo.dto.BoardDto">
+        SELECT * FROM data.board WHERE board_id = #{boardId};
+    </select>
+    <delete id="noticeDelete" parameterType="int">
+        DELETE FROM data.board WHERE board_id = #{boardId};
+    </delete>
+    <insert id="noticeWrite" parameterType="com.example.demo.dto.BoardDto" >
+        INSERT INTO board(id,title,story,type,created_date)
+        values (#{id},#{title},#{story},#{type},#{created_date});
+    </insert>
+</mapper>
